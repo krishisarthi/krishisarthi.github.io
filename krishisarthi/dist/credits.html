@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KrishiSarthi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap'>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    .text {
+      font-family: 'Montserrat', sans-serif;
+      position: absolute;
+      top: 20px; /* Adjust the top position as needed */
+      left: 50%; /* Center horizontally */
+      transform: translateX(-50%); /* Center the text horizontally */
+    }
+
+    .text .text-item {
+      color: black; /* Set the text color to black */
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-left: 20px; /* Adjust the spacing between text items */
+      text-decoration: none; /* Remove underline */
+      opacity: 0; /* Initially hide the text for animation */
+    }
+  </style>
+</head>
+<body>
+  <div class="text">
+    <a href="app.html" class="text-item">App</a>
+    <a href="about.html" class="text-item">About Us</a>
+    <a href="credits.html" class="text-item">Credits</a>
+    <a href="idea.html" class="text-item">Idea</a>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js'></script>
+  <script>
+    gsap.to(".text-item", { duration: 1, opacity: 1, stagger: 0.2, ease: "power1.in" });
+  </script>
+</body>
+</html>
 
